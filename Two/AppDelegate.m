@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()<UIScrollViewDelegate>
-{
-    UIPageControl *pageControl;
+#import "ViewController.h"
+#import "LGuidePage.h"
+@interface AppDelegate (){
 }
 @end
 
@@ -18,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self loadingGuidePage:[self gitPicArr]];
+    LGuidePage *lgp = [LGuidePage new];
+    lgp.picArr = @[@"0.jpg",@"6.jpg"];
+    [lgp addV];
+    [self.window.rootViewController.view addSubview:lgp];
     
     return YES;
 }
@@ -126,72 +128,6 @@
     }
 }
 
-//加载引导页
-- (void)loadingGuidePage:(NSArray *)picArr
-{
-    NSInteger flag = [[NSUserDefaults standardUserDefaults] integerForKey:@"numberOfStarts"];
-    NSLog(@"%ld",flag);
-    
-    if (1) {
-        CGFloat width = [UIScreen mainScreen].bounds.size.width;
-        CGFloat height = [UIScreen mainScreen].bounds.size.height;
-        //设置滑动scrollView
-        UIScrollView *guidePageScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, width,height)];
-        guidePageScrollView.contentSize = CGSizeMake(width * picArr.count, 0);
-        guidePageScrollView.pagingEnabled = YES;
-        guidePageScrollView.delegate = self;
-        //放上对应的引导图片
-        for (NSInteger i=0; i<picArr.count; i++) {
-            UIImageView *imageView = [UIImageView new];
-            imageView.frame = CGRectMake(width * i, 0, width, height);
-            imageView.image = [UIImage imageNamed:[picArr objectAtIndex:i]];
-            [guidePageScrollView addSubview:imageView];
-            //最后一张放上确认按钮
-            if (i == (picArr.count-1)) {
-                UIButton *tureBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-                tureBtn.frame = CGRectMake((width -150)/2, height-100, 150, 50);
-                tureBtn.backgroundColor = [UIColor cyanColor];
-                [tureBtn setTitle:@"GO" forState:UIControlStateNormal];
-                tureBtn.layer.cornerRadius = 5;
-                [tureBtn addTarget: self action:@selector(hideGuidePage) forControlEvents:UIControlEventTouchUpInside];
-                imageView.userInteractionEnabled = YES;
-                [imageView addSubview:tureBtn];
-            }
-        }
-        [self.window.rootViewController.view addSubview:guidePageScrollView];
-        flag++;
-        [[NSUserDefaults standardUserDefaults]setInteger:flag forKey:@"numberOfStarts"];
-        //添加显示页面的点
-        pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, height - 50, width, 30)];
-        [self.window.rootViewController.view addSubview:pageControl];
-        pageControl.numberOfPages = picArr.count;
-        pageControl.currentPageIndicatorTintColor = [UIColor redColor];
-    }
-}
 
-//隐藏引导页
-- (void)hideGuidePage
-{
-    NSArray *arr = [self.window.rootViewController.view subviews];
-    for (UIView *vc in arr) {
-        if ([vc isMemberOfClass:[UIScrollView class]] || [vc isMemberOfClass:[UIPageControl class]]) {
-            [vc removeFromSuperview];
-        }
-    }
-}
-
-- (NSArray *)gitPicArr
-{
-    NSMutableArray *arr = [NSMutableArray array];
-    for (int i = 0; i < 10; i++) {
-        [arr addObject:[NSString stringWithFormat:@"%d.jpg",i]];
-    }
-    return arr;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    pageControl.currentPage = (int)scrollView.contentOffset.x/SCREENWIDTH;
-}
 
 @end
