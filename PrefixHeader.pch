@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  Two
+//
+//  Created by ryt on 16/7/12.
+//  Copyright © 2016年 ryt. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define USERDEfAULTS [NSUserDefaults standardUserDefaults]
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREENWIDTH  [UIScreen mainScreen].bounds.size.width
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
