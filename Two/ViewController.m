@@ -16,9 +16,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    [self showImage];
 }
 
+- (void)showImage
+{
+    NSString *str = @"/club/cardPortals/adv/20160627100000000242_second41416.jpg";
+    UIImage *img = [UIImage imageWithContentsOfFile:str];
+    UIImageView *imgView = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    imgView.image = img;
+    [self.view addSubview:imgView];
+}
 
 
 - (void)didReceiveMemoryWarning {

@@ -4,7 +4,7 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "736h",
-      "filename" : "1242*2208.png",
+      "filename" : "1242*2208@.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "3x"
@@ -56,7 +56,7 @@
       "extent" : "full-screen",
       "subtype" : "retina4",
       "scale" : "2x"
-    },
+    }
   ],
   "info" : {
     "version" : 1,

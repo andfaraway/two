@@ -31,6 +31,9 @@
 		04B29C151D2118E0008D5A9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B29C141D2118E0008D5A9B /* Images.xcassets */; };
 		04B29C231D2118E0008D5A9B /* TwoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B29C221D2118E0008D5A9B /* TwoTests.m */; };
 		04B29C2E1D2118E0008D5A9B /* TwoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B29C2D1D2118E0008D5A9B /* TwoUITests.m */; };
+		04C9C20F1D45FFB000119B7E /* SocketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9C20E1D45FFB000119B7E /* SocketVC.m */; };
+		04C9C21F1D46465C00119B7E /* LCAShapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9C21E1D46465C00119B7E /* LCAShapeLayer.m */; };
+		04C9C2221D46494800119B7E /* LCAShapeLayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9C2211D46494800119B7E /* LCAShapeLayerVC.m */; };
 		04FDD28E1D38E24B00B5D0DD /* LGuidePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDD28D1D38E24B00B5D0DD /* LGuidePage.m */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,12 @@
 		04B29C291D2118E0008D5A9B /* TwoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B29C2D1D2118E0008D5A9B /* TwoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoUITests.m; sourceTree = "<group>"; };
 		04B29C2F1D2118E0008D5A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C9C20D1D45FFB000119B7E /* SocketVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketVC.h; sourceTree = "<group>"; };
+		04C9C20E1D45FFB000119B7E /* SocketVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketVC.m; sourceTree = "<group>"; };
+		04C9C21D1D46465C00119B7E /* LCAShapeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAShapeLayer.h; sourceTree = "<group>"; };
+		04C9C21E1D46465C00119B7E /* LCAShapeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAShapeLayer.m; sourceTree = "<group>"; };
+		04C9C2201D46494800119B7E /* LCAShapeLayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAShapeLayerVC.h; sourceTree = "<group>"; };
+		04C9C2211D46494800119B7E /* LCAShapeLayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAShapeLayerVC.m; sourceTree = "<group>"; };
 		04FDD28C1D38E24B00B5D0DD /* LGuidePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGuidePage.h; sourceTree = "<group>"; };
 		04FDD28D1D38E24B00B5D0DD /* LGuidePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGuidePage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040AE1511D41F7AD00F63C4C /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				04C9C20D1D45FFB000119B7E /* SocketVC.h */,
+				04C9C20E1D45FFB000119B7E /* SocketVC.m */,
+			);
+			name = Socket;
+			sourceTree = "<group>";
+		};
 		0488F2411D3510230040E9A0 /* guidePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +178,8 @@
 		04B29C041D2118E0008D5A9B /* Two */ = {
 			isa = PBXGroup;
 			children = (
+				04C9C2191D4645D700119B7E /* LCAShapeLayer */,
+				040AE1511D41F7AD00F63C4C /* Socket */,
 				04B29C081D2118E0008D5A9B /* AppDelegate.h */,
 				04B29C091D2118E0008D5A9B /* AppDelegate.m */,
 				04B29C0B1D2118E0008D5A9B /* ViewController.h */,
@@ -200,6 +220,17 @@
 				04B29C2F1D2118E0008D5A9B /* Info.plist */,
 			);
 			path = TwoUITests;
+			sourceTree = "<group>";
+		};
+		04C9C2191D4645D700119B7E /* LCAShapeLayer */ = {
+			isa = PBXGroup;
+			children = (
+				04C9C21D1D46465C00119B7E /* LCAShapeLayer.h */,
+				04C9C21E1D46465C00119B7E /* LCAShapeLayer.m */,
+				04C9C2201D46494800119B7E /* LCAShapeLayerVC.h */,
+				04C9C2211D46494800119B7E /* LCAShapeLayerVC.m */,
+			);
+			name = LCAShapeLayer;
 			sourceTree = "<group>";
 		};
 		04FDD2831D38D52D00B5D0DD /* LGuidePage */ = {
@@ -357,9 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FDD28E1D38E24B00B5D0DD /* LGuidePage.m in Sources */,
+				04C9C20F1D45FFB000119B7E /* SocketVC.m in Sources */,
 				04B29C0D1D2118E0008D5A9B /* ViewController.m in Sources */,
+				04C9C2221D46494800119B7E /* LCAShapeLayerVC.m in Sources */,
 				04B29C0A1D2118E0008D5A9B /* AppDelegate.m in Sources */,
 				04B29C131D2118E0008D5A9B /* Two.xcdatamodeld in Sources */,
+				04C9C21F1D46465C00119B7E /* LCAShapeLayer.m in Sources */,
 				04B29C071D2118E0008D5A9B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,14 +528,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 骏东 黄 (ULM52E832Y)";
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = Two/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cgb.trade.iphone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cgb.wallet.iphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "739af28d-81e0-4762-9c2b-4e506edfbdd4";
 			};
 			name = Debug;
 		};
@@ -510,14 +544,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 骏东 黄 (ULM52E832Y)";
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = Two/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cgb.trade.iphone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cgb.wallet.iphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "739af28d-81e0-4762-9c2b-4e506edfbdd4";
 			};
 			name = Release;
 		};

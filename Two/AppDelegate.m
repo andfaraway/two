@@ -17,10 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    LGuidePage *lgp = [LGuidePage new];
-    lgp.picArr = @[@"0.jpg",@"6.jpg"];
-    [lgp addV];
-    [self.window.rootViewController.view addSubview:lgp];
+//    LGuidePage *lgp = [LGuidePage new];
+//    lgp.picArr = @[@"0.jpg",@"6.jpg"];
+//    [lgp addV];
+//    [self.window.rootViewController.view addSubview:lgp];
     
     return YES;
 }
