@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -50,14 +51,48 @@
                                     <segue destination="gzt-Uv-bWY" kind="show" id="y5q-kM-p7R"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlM-Zu-Hy0">
+                                <rect key="frame" x="30" y="201" width="92" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="784-Ue-qok"/>
+                                    <constraint firstAttribute="height" constant="43" id="EZN-ng-4Yw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="JQn-Ul-NJR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="eRN-vQ-xv4"/>
+                                    <constraint firstAttribute="width" constant="92" id="g9K-cJ-S50"/>
+                                    <constraint firstAttribute="height" constant="30" id="yFU-4t-mwr"/>
+                                </constraints>
+                                <state key="normal" title="webView"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="784-Ue-qok"/>
+                                        <exclude reference="yFU-4t-mwr"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6I-m3-DS1">
+                                <rect key="frame" x="190" y="214" width="115" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.30980393290000002" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="n6I-m3-DS1" secondAttribute="height" multiplier="23:6" id="0HI-hw-OtA"/>
+                                </constraints>
+                                <state key="normal" title="侧滑"/>
+                                <connections>
+                                    <action selector="cehua:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jzb-6O-zT4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="mni-No-KYR" secondAttribute="trailing" constant="54" id="0Xm-9n-oWI"/>
                             <constraint firstItem="LsG-tv-Zm1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="7yE-Hw-KLl"/>
+                            <constraint firstItem="n6I-m3-DS1" firstAttribute="leading" secondItem="RlM-Zu-Hy0" secondAttribute="trailing" constant="68" id="GAq-6M-q9Z"/>
+                            <constraint firstItem="n6I-m3-DS1" firstAttribute="top" secondItem="mni-No-KYR" secondAttribute="bottom" constant="70" id="LBz-7v-QxP"/>
                             <constraint firstItem="LsG-tv-Zm1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="ReW-Oo-2JB"/>
                             <constraint firstItem="LsG-tv-Zm1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="iZN-7K-xK6"/>
+                            <constraint firstItem="RlM-Zu-Hy0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="lzc-WK-4Re"/>
                             <constraint firstItem="mni-No-KYR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="p7p-Vg-wXO"/>
+                            <constraint firstItem="RlM-Zu-Hy0" firstAttribute="top" secondItem="LsG-tv-Zm1" secondAttribute="bottom" constant="55" id="pth-xh-gt0"/>
                             <constraint firstItem="LsG-tv-Zm1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="wne-11-tgH"/>
                         </constraints>
                         <variation key="default">

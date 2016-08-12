@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E440F1D546DAA00228361 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E440D1D546DAA00228361 /* ShareView.m */; };
+		040E44101D546DAA00228361 /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E440E1D546DAA00228361 /* ShareView.xib */; };
+		042A5EAA1D5DABE900F4E3D5 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A5EA71D5DABE900F4E3D5 /* DeckViewController.m */; };
+		042A5EAB1D5DABE900F4E3D5 /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A5EA91D5DABE900F4E3D5 /* UIView_extra.m */; };
+		042A5EAE1D5DAE4C00F4E3D5 /* LLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A5EAD1D5DAE4C00F4E3D5 /* LLeftView.m */; };
+		042A5EB41D5DAEE600F4E3D5 /* UIView+DHTransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A5EB31D5DAEE600F4E3D5 /* UIView+DHTransform3D.m */; };
+		042A5EB81D5DAF4100F4E3D5 /* DHVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 042A5EB71D5DAF4100F4E3D5 /* DHVector.m */; };
 		0488F2531D3510230040E9A0 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0488F2421D3510230040E9A0 /* 1.jpg */; };
 		0488F2541D3510230040E9A0 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0488F2431D3510230040E9A0 /* 2.jpg */; };
 		0488F2551D3510230040E9A0 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0488F2441D3510230040E9A0 /* 3.jpg */; };
@@ -55,6 +62,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040E440C1D546DAA00228361 /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
+		040E440D1D546DAA00228361 /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
+		040E440E1D546DAA00228361 /* ShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareView.xib; sourceTree = "<group>"; };
+		042A5EA61D5DABE900F4E3D5 /* DeckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckViewController.h; sourceTree = "<group>"; };
+		042A5EA71D5DABE900F4E3D5 /* DeckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckViewController.m; sourceTree = "<group>"; };
+		042A5EA81D5DABE900F4E3D5 /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_extra.h; sourceTree = "<group>"; };
+		042A5EA91D5DABE900F4E3D5 /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_extra.m; sourceTree = "<group>"; };
+		042A5EAC1D5DAE4C00F4E3D5 /* LLeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLeftView.h; sourceTree = "<group>"; };
+		042A5EAD1D5DAE4C00F4E3D5 /* LLeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLeftView.m; sourceTree = "<group>"; };
+		042A5EB21D5DAEE600F4E3D5 /* UIView+DHTransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DHTransform3D.h"; sourceTree = "<group>"; };
+		042A5EB31D5DAEE600F4E3D5 /* UIView+DHTransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DHTransform3D.m"; sourceTree = "<group>"; };
+		042A5EB61D5DAF4100F4E3D5 /* DHVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHVector.h; sourceTree = "<group>"; };
+		042A5EB71D5DAF4100F4E3D5 /* DHVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHVector.m; sourceTree = "<group>"; };
 		0488F23B1D34F13E0040E9A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 		0488F2421D3510230040E9A0 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		0488F2431D3510230040E9A0 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -132,6 +152,39 @@
 			name = Socket;
 			sourceTree = "<group>";
 		};
+		042A5EA51D5DABE900F4E3D5 /* LeftView */ = {
+			isa = PBXGroup;
+			children = (
+				042A5EB11D5DAEE600F4E3D5 /* DHTransfrom3DView */,
+				042A5EB51D5DAF4100F4E3D5 /* DHVector */,
+				042A5EA61D5DABE900F4E3D5 /* DeckViewController.h */,
+				042A5EA71D5DABE900F4E3D5 /* DeckViewController.m */,
+				042A5EA81D5DABE900F4E3D5 /* UIView_extra.h */,
+				042A5EA91D5DABE900F4E3D5 /* UIView_extra.m */,
+				042A5EAC1D5DAE4C00F4E3D5 /* LLeftView.h */,
+				042A5EAD1D5DAE4C00F4E3D5 /* LLeftView.m */,
+			);
+			path = LeftView;
+			sourceTree = "<group>";
+		};
+		042A5EB11D5DAEE600F4E3D5 /* DHTransfrom3DView */ = {
+			isa = PBXGroup;
+			children = (
+				042A5EB21D5DAEE600F4E3D5 /* UIView+DHTransform3D.h */,
+				042A5EB31D5DAEE600F4E3D5 /* UIView+DHTransform3D.m */,
+			);
+			path = DHTransfrom3DView;
+			sourceTree = "<group>";
+		};
+		042A5EB51D5DAF4100F4E3D5 /* DHVector */ = {
+			isa = PBXGroup;
+			children = (
+				042A5EB61D5DAF4100F4E3D5 /* DHVector.h */,
+				042A5EB71D5DAF4100F4E3D5 /* DHVector.m */,
+			);
+			path = DHVector;
+			sourceTree = "<group>";
+		};
 		0488F2411D3510230040E9A0 /* guidePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +231,9 @@
 		04B29C041D2118E0008D5A9B /* Two */ = {
 			isa = PBXGroup;
 			children = (
+				042A5EA51D5DABE900F4E3D5 /* LeftView */,
 				04C9C2191D4645D700119B7E /* LCAShapeLayer */,
+				04CCAF0A1D4EE74A00546694 /* WebVC */,
 				040AE1511D41F7AD00F63C4C /* Socket */,
 				04B29C081D2118E0008D5A9B /* AppDelegate.h */,
 				04B29C091D2118E0008D5A9B /* AppDelegate.m */,
@@ -231,6 +286,16 @@
 				04C9C2211D46494800119B7E /* LCAShapeLayerVC.m */,
 			);
 			name = LCAShapeLayer;
+			sourceTree = "<group>";
+		};
+		04CCAF0A1D4EE74A00546694 /* WebVC */ = {
+			isa = PBXGroup;
+			children = (
+				040E440C1D546DAA00228361 /* ShareView.h */,
+				040E440D1D546DAA00228361 /* ShareView.m */,
+				040E440E1D546DAA00228361 /* ShareView.xib */,
+			);
+			path = WebVC;
 			sourceTree = "<group>";
 		};
 		04FDD2831D38D52D00B5D0DD /* LGuidePage */ = {
@@ -309,6 +374,7 @@
 				TargetAttributes = {
 					04B29C011D2118DF008D5A9B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 875QN44U4L;
 					};
 					04B29C1D1D2118E0008D5A9B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -356,6 +422,7 @@
 				0488F2581D3510230040E9A0 /* 5.jpg in Resources */,
 				0488F2631D3510230040E9A0 /* 1468126481996.jpg in Resources */,
 				0488F2611D3510230040E9A0 /* 1468009316010.jpg in Resources */,
+				040E44101D546DAA00228361 /* ShareView.xib in Resources */,
 				0488F25F1D3510230040E9A0 /* 0.jpg in Resources */,
 				0488F25C1D3510230040E9A0 /* 9.jpg in Resources */,
 				0488F25A1D3510230040E9A0 /* 7.jpg in Resources */,
@@ -387,13 +454,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042A5EAE1D5DAE4C00F4E3D5 /* LLeftView.m in Sources */,
+				042A5EAB1D5DABE900F4E3D5 /* UIView_extra.m in Sources */,
 				04FDD28E1D38E24B00B5D0DD /* LGuidePage.m in Sources */,
+				040E440F1D546DAA00228361 /* ShareView.m in Sources */,
 				04C9C20F1D45FFB000119B7E /* SocketVC.m in Sources */,
+				042A5EAA1D5DABE900F4E3D5 /* DeckViewController.m in Sources */,
 				04B29C0D1D2118E0008D5A9B /* ViewController.m in Sources */,
+				042A5EB41D5DAEE600F4E3D5 /* UIView+DHTransform3D.m in Sources */,
 				04C9C2221D46494800119B7E /* LCAShapeLayerVC.m in Sources */,
 				04B29C0A1D2118E0008D5A9B /* AppDelegate.m in Sources */,
 				04B29C131D2118E0008D5A9B /* Two.xcdatamodeld in Sources */,
 				04C9C21F1D46465C00119B7E /* LCAShapeLayer.m in Sources */,
+				042A5EB81D5DAF4100F4E3D5 /* DHVector.m in Sources */,
 				04B29C071D2118E0008D5A9B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,14 +601,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 骏东 黄 (ULM52E832Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = Two/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cgb.wallet.iphone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bin.li;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "739af28d-81e0-4762-9c2b-4e506edfbdd4";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -544,14 +618,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 骏东 黄 (ULM52E832Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = Two/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cgb.wallet.iphone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bin.li;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "739af28d-81e0-4762-9c2b-4e506edfbdd4";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
