@@ -24,7 +24,7 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     //设置滑动scrollView
-    self.frame =CGRectMake(0, 0, width,height);
+    self.frame =CGRectMake(0, 0, width,100);
     self.contentSize = CGSizeMake(width * _picArr.count, 0);
     self.pagingEnabled = YES;
     //放上对应的引导图片
@@ -52,7 +52,6 @@
     _pageControl.numberOfPages = _picArr.count;
     _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
 }
-
 
 //移除页面
 - (void)hideGuidePage

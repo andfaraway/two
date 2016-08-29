@@ -88,6 +88,9 @@
         UIView *view = [[UIView alloc] init];
         view.frame = _leftVC.view.frame;
         view.backgroundColor = [UIColor blackColor];
+        //改变背景颜色
+//        view.backgroundColor = [UIColor whiteColor];
+//        self.view.backgroundColor = [UIColor whiteColor];
         view.alpha = 0.8;
         _contentView = view;
         [self.view addSubview:view];

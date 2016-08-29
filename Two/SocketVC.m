@@ -46,7 +46,7 @@
 - (NSString *)sendAndRecv:(NSString *)message
 {
     //1.发送信息
-    ssize_t sendLen = send(self.clientSocket, message.UTF8String, strlen(message.UTF8String),0);
+//    ssize_t sendLen = send(self.clientSocket, message.UTF8String, strlen(message.UTF8String),0);
     //2.接收信息
     //2.1定义一个数组
     uint8_t buffer[1024];

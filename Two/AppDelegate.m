@@ -9,7 +9,12 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "LGuidePage.h"
+#import "DeckViewController.h"
+#import "BackgroundView.h"
+
 @interface AppDelegate (){
+    UIViewController *mainVC;
+    DeckViewController *dec;
 }
 @end
 
@@ -17,12 +22,40 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    LGuidePage *lgp = [LGuidePage new];
-//    lgp.picArr = @[@"0.jpg",@"6.jpg"];
-//    [lgp addV];
-//    [self.window.rootViewController.view addSubview:lgp];
+   
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
+    UIViewController *leftVC = [[UIViewController alloc]init];
+    leftVC.view.backgroundColor = [UIColor cyanColor];
+    
+    UIView *imgV = [BackgroundView new];
+    
+    
+    leftVC.view.frame = [UIScreen mainScreen].bounds;
+    imgV.frame = leftVC.view.bounds;
+    [leftVC.view addSubview:imgV];
+    
+    mainVC = [ViewController new];
+    
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVC];
+    
+    dec = [[DeckViewController alloc]initWithLeftView:leftVC andMainView:nav];
+    self.window.rootViewController = dec;
+    
+    //监听点击事件
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(jokerClick) name:@"joker" object:nil];
+    
+    
+    //设置状态栏字体颜色
+    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -121,13 +154,21 @@
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error  no %@, %@", error, [error userInfo]);
-
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }
 }
 
+- (void)jokerClick
+{
+    NSLog(@"click");
+    [dec closeLeftView];
+    mainVC.view.backgroundColor = [UIColor magentaColor];
+}
 
-
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 @end

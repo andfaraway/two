@@ -8,44 +8,65 @@
 
 #import "ViewController.h"
 #import "DeckViewController.h"
+#import "LAdvView.h"
+#import "BackgroundView.h"
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+//重写init方法
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainVC" bundle:[NSBundle mainBundle]];
+        self = [storyBoard instantiateInitialViewController];
+    }
+    return self;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
-    CGPoint center = self.view.window.center;
-
-    CGAffineTransform tf = CGAffineTransformIdentity;
-    [UIView animateWithDuration:5 animations:^{
-        self.view.transform = CGAffineTransformScale(tf, 0.7, 0.7);
-        self.view.center = CGPointMake(center.x, center.y+100);
-    }];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = YES;
+    if (VERSION >= 7.0) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+//    CGPoint center = self.view.window.center;
+//r
+//    CGAffineTransform tf = CGAffineTransformIdentity;
+//    [UIView animateWithDuration:0.5 animations:^{
+//        self.view.transform = CGAffineTransformScale(tf, 0.7, 0.7);
+//        self.view.center = CGPointMake(center.x, center.y+100);
+//    }];
+    [self random];
 }
      
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self showImage];
+    self.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT );
 }
 
-- (void)showImage
+//button随机排布
+- (void)random
 {
-    NSString *str = @"/club/cardPortals/adv/20160627100000000242_second41416.jpg";
-    UIImage *img = [UIImage imageWithContentsOfFile:str];
-    UIImageView *imgView = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    imgView.image = img;
-    [self.view addSubview:imgView];
+    for (int i=100; i<104 ;i++){
+        CGFloat rx = arc4random()%(int)SCREEN_WIDTH;
+        CGFloat ry = arc4random()%(int)SCREEN_HEIGHT+50;
+        CGPoint  rPoint = CGPointMake(rx, ry);
+        UIButton *button = [self.view viewWithTag:i];
+        button.frame = CGRectMake(0, 0, 100, 50);
+        button.center = rPoint;
+    }
 }
 
 - (IBAction)cehua:(id)sender {
-    UIViewController *leftVC = [[UIViewController alloc]init];
-    leftVC.view.backgroundColor = [UIColor orangeColor];
-    UIViewController *mainVC = [[UIViewController alloc]init];
-    mainVC.view.backgroundColor = [UIColor cyanColor];
-    DeckViewController *dec = [[DeckViewController alloc]initWithLeftView:leftVC andMainView:mainVC];
-    [self presentViewController:dec animated:YES completion:nil];
+ 
+   
+    
 }
 
 - (void)didReceiveMemoryWarning {
