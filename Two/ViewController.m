@@ -10,6 +10,8 @@
 #import "DeckViewController.h"
 #import "LAdvView.h"
 #import "BackgroundView.h"
+#import "Joker.h"
+#import "Contact.h"
 @interface ViewController ()
 
 @end
@@ -22,25 +24,21 @@
     self = [super init];
     if (self) {
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainVC" bundle:[NSBundle mainBundle]];
-        self = [storyBoard instantiateInitialViewController];
+        self = [storyBoard instantiateViewControllerWithIdentifier:@"firstView"];
     }
     return self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:174/255.0 green:225/255.0 blue:198/255.0 alpha:1];
+    self.title = @"Test";
+    //导航栏是否半透明
+    self.navigationController.navigationBar.translucent = NO;
     if (VERSION >= 7.0) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
-//    CGPoint center = self.view.window.center;
-//r
-//    CGAffineTransform tf = CGAffineTransformIdentity;
-//    [UIView animateWithDuration:0.5 animations:^{
-//        self.view.transform = CGAffineTransformScale(tf, 0.7, 0.7);
-//        self.view.center = CGPointMake(center.x, center.y+100);
-//    }];
+
     [self random];
 }
      
@@ -62,12 +60,12 @@
         button.center = rPoint;
     }
 }
-
-- (IBAction)cehua:(id)sender {
- 
-   
-    
+//跳转联系人页面
+- (IBAction)Contect:(id)sender {
+    Contact *contact = [Contact new];
+    [contact openContact:self];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

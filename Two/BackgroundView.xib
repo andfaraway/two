@@ -25,11 +25,24 @@
                         <action selector="joker:" destination="iN0-l3-epB" eventType="touchUpInside" id="Q1E-xy-gZo"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDB-pn-bOR">
+                    <rect key="frame" x="27" y="612" width="72" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="72" id="0F1-Kg-Pwt"/>
+                        <constraint firstAttribute="height" constant="30" id="ehH-zM-ADV"/>
+                    </constraints>
+                    <state key="normal" title="flashlight"/>
+                    <connections>
+                        <action selector="flashlight:" destination="iN0-l3-epB" eventType="touchUpInside" id="Y4u-FW-xwh"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="DDB-pn-bOR" secondAttribute="bottom" constant="25" id="49B-Of-cHy"/>
                 <constraint firstAttribute="bottom" secondItem="Gpd-V1-fJe" secondAttribute="bottom" id="EX7-Ba-b8o"/>
                 <constraint firstItem="Gpd-V1-fJe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NW0-AP-Xmy"/>
+                <constraint firstItem="DDB-pn-bOR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="27" id="PPu-E3-zB8"/>
                 <constraint firstAttribute="trailing" secondItem="Gpd-V1-fJe" secondAttribute="trailing" id="Weh-X2-cmG"/>
                 <constraint firstItem="Ky5-zq-bTC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="27" id="oTY-fh-YLy"/>
                 <constraint firstItem="Ky5-zq-bTC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="wZ7-YE-bgQ"/>

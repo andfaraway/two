@@ -11,6 +11,7 @@
 #import "LGuidePage.h"
 #import "DeckViewController.h"
 #import "BackgroundView.h"
+#import "Joker.h"
 
 @interface AppDelegate (){
     UIViewController *mainVC;
@@ -23,7 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
@@ -43,6 +44,7 @@
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVC];
     
     dec = [[DeckViewController alloc]initWithLeftView:leftVC andMainView:nav];
+    
     self.window.rootViewController = dec;
     
     //监听点击事件
@@ -164,7 +166,8 @@
 {
     NSLog(@"click");
     [dec closeLeftView];
-    mainVC.view.backgroundColor = [UIColor magentaColor];
+    Joker *joker = [Joker new];
+    [mainVC.navigationController pushViewController:joker animated:YES];
 }
 
 - (void)dealloc

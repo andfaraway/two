@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,9 +41,9 @@
                                 <rect key="frame" x="190" y="214" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.30980393290000002" alpha="1" colorSpace="deviceRGB"/>
-                                <state key="normal" title="侧滑"/>
+                                <state key="normal" title="Contact"/>
                                 <connections>
-                                    <action selector="cehua:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jzb-6O-zT4"/>
+                                    <action selector="Contect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35i-UC-DbA"/>
                                 </connections>
                             </button>
                         </subviews>

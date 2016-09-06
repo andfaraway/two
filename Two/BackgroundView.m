@@ -8,6 +8,7 @@
 
 #import "BackgroundView.h"
 #import "AFHTTPRequestOperationManager.h"
+#import "Flashlight.h"
 @implementation BackgroundView
 - (instancetype)init
 {
@@ -17,6 +18,7 @@
     }
     return self;
 }
+#pragma mark - joker
 - (IBAction)joker:(id)sender {
     [[NSNotificationCenter defaultCenter]postNotificationName:@"joker" object:self userInfo:nil];
     
@@ -51,12 +53,22 @@
     [operation start];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark - flashlight
+- (IBAction)flashlight:(id)sender {
+    UIButton *button = sender;
+    Flashlight *flashlight = [Flashlight new];
+    static BOOL isON = YES;
+    [flashlight turnOnLed:isON];
+    //根据状态调整button title
+    if (isON) {
+        [button setTitle:@"off" forState:UIControlStateNormal];
+    }else{
+        [button setTitle:@"on" forState:UIControlStateNormal];
+    }
+    
+
+    //更改状态
+    isON = !isON;
 }
-*/
 
 @end
