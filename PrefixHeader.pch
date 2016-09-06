@@ -16,6 +16,17 @@
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define VERSION     [UIDevice currentDevice].systemVersion.integerValue
 
+//取色
+#define CRGB(a,b,c,d) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:d]
+
+#define NSLog(format, ...) do {		                \
+fprintf(stderr, "<%s : %d> %s\n",	              \
+[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+__LINE__, __func__);	                           \
+(NSLog)((format), ##__VA_ARGS__);	              \
+fprintf(stderr, "-------\n");	                  \
+} while (0)
+
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
