@@ -45,6 +45,8 @@
      
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"222222");
+
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT );
 }
@@ -52,6 +54,8 @@
 //button随机排布
 - (void)random
 {
+    NSLog(@"133331");
+
     for (int i=100; i<104 ;i++){
         CGFloat rx = arc4random()%(int)SCREEN_WIDTH;
         CGFloat ry = arc4random()%(int)SCREEN_HEIGHT+50;
