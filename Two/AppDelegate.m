@@ -34,7 +34,6 @@
     
     UIView *imgV = [BackgroundView new];
     
-    
     leftVC.view.frame = [UIScreen mainScreen].bounds;
     imgV.frame = leftVC.view.bounds;
     [leftVC.view addSubview:imgV];

@@ -5,6 +5,32 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--FirstVC-->
+        <scene sceneID="lun-8e-FmN">
+            <objects>
+                <viewController id="VT0-7b-QWp" customClass="FirstVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OI3-b3-dfF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rSz-a0-hAO">
+                                <rect key="frame" x="147" y="248" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="presenting"/>
+                                <connections>
+                                    <action selector="presenting:" destination="VT0-7b-QWp" eventType="touchUpInside" id="3NT-RO-t6m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xf0-dl-vBz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNk-HZ-YlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367.5" y="-43.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -44,6 +70,15 @@
                                 <state key="normal" title="Contact"/>
                                 <connections>
                                     <action selector="Contect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35i-UC-DbA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0kE-DV-TMm">
+                                <rect key="frame" x="30" y="395" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="转场动画"/>
+                                <connections>
+                                    <segue destination="VT0-7b-QWp" kind="push" id="SRt-z2-p5U"/>
                                 </connections>
                             </button>
                         </subviews>

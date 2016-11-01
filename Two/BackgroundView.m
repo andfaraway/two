@@ -23,7 +23,7 @@
     [[NSNotificationCenter defaultCenter]postNotificationName:@"joker" object:self userInfo:nil];
     
     NSString *httpUrl = @"http://apis.baidu.com/showapi_open_bus/showapi_joke/joke_text";
-    NSString *httpArg = @"page=1";
+    NSString *httpArg = @"page=2";
     
     NSString *urlStr = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, httpArg];
     NSURL *url = [NSURL URLWithString: urlStr];
@@ -53,17 +53,17 @@
     [operation start];
 }
 
-#pragma mark - flashlight
+#pragma mark - flashlight 手电筒
 - (IBAction)flashlight:(id)sender {
     UIButton *button = sender;
     Flashlight *flashlight = [Flashlight new];
     static BOOL isON = YES;
     [flashlight turnOnLed:isON];
-    //根据状态调整button title
+    //根据状态调整button 图片
     if (isON) {
-        [button setTitle:@"off" forState:UIControlStateNormal];
+        [button setImage:[[UIImage imageNamed:@"flashlightOn"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  forState:UIControlStateNormal];
     }else{
-        [button setTitle:@"on" forState:UIControlStateNormal];
+        [button setImage:[[UIImage imageNamed:@"flashlightOff"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  forState:UIControlStateNormal];
     }
     
 

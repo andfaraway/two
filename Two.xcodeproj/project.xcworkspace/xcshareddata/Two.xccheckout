@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>77115A0B-EC0B-4641-B31D-E9DF3E1AF39C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Two</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A3A56FE50CE86A77C3644804146828CC1D3C55C3</key>
 		<string>https://github.com/andfaraway/two.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Two.xcodeproj/project.xcworkspace</string>
+	<string>Two.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A3A56FE50CE86A77C3644804146828CC1D3C55C3</key>
