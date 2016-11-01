@@ -31,7 +31,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"1111111");
+    NSLog(@"testtest");
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:174/255.0 green:225/255.0 blue:198/255.0 alpha:1];
     self.title = @"Test";
     //导航栏是否半透明
