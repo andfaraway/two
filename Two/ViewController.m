@@ -21,6 +21,7 @@
 //重写init方法
 - (instancetype)init
 {
+    sfafas
     self = [super init];
     if (self) {
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainVC" bundle:[NSBundle mainBundle]];
